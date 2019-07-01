@@ -33,7 +33,6 @@
                     <tx:method name="update*"/>
                     <tx:method name="insert*"/>
                     <tx:method name="add*"/>
-                    <tx:method name="submitOrder" propagation="REQUIRES_NEW"/>
                 </tx:attributes>
     </tx:advice>
 

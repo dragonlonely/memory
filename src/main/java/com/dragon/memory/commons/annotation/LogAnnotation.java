@@ -1,9 +1,6 @@
 package com.dragon.memory.commons.annotation;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @Classname LogAnnotation
@@ -11,12 +8,13 @@ import java.lang.annotation.Target;
  * @Date 2019/1/7 19:29
  * @Created by Administrator
  */
-@Target(ElementType.METHOD)
+@Target({ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface LogAnnotation {
 
     //别名
-    String opertionName(); //操作名称 比如 登录
-    String operationType(); //操作类型 比如 login
+    String opertionName() default ""; //操作名称 比如 登录
+    String operationType() default ""; //操作类型 比如 login
 
 }

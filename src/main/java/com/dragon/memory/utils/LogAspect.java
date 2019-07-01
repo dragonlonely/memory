@@ -25,7 +25,7 @@ public class LogAspect {
     @Autowired
     private LogService logService;
 
-    @Pointcut("execution(* com.dragon..controller.*.*(..))")
+    @Pointcut("execution(* com.dragon.memory..controller..*.*(..))")
     public void pointCut(){
 
     }
