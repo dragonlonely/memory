@@ -43,7 +43,7 @@ public class AddPicturesController {
             System.out.println("文件大小："+fileSize);
             if(fileSize > 10485760){
                 logger.info("上传的文件大小超出最大值!");
-                return "fileerror";
+                return "/fileerror";
             }
             String ext_name = filename.substring(filename.lastIndexOf(".") + 1);
             String path = fastDfsUtils.fileUpload(file.getBytes(), ext_name);
