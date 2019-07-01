@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dragon.memory.mapper.MemoryMapper">
+
+    <insert id="addPictures" parameterType="com.dragon.memory.picture.pojo.Memory">
+        insert into tb_memory(pname,picture,createtime,remark,star) values (#{pname},#{picture},#{createtime},#{remark},#{star})
+    </insert>
+
+    <select id="getAllPictures" resultType="com.dragon.memory.picture.pojo.Memory">
+        select * from tb_memory order by id limit ${(pageNum-1)*pageSize},${pageSize}
+    </select>
+
+    <select id="getCount" resultType="long">
+        select count(*) from tb_memory
+    </select>
+
+    <select id="findByName" parameterType="string" resultType="com.dragon.memory.picture.pojo.Memory">
+        SELECT * FROM tb_memory WHERE pname like '%${value}%' ORDER BY id
+    </select>
+
+    <select id="getPicturesDetailById" resultType="com.dragon.memory.picture.pojo.Memory" parameterType="int">
+        select * from tb_memory where id = #{id}
+    </select>
+
+    <select id="deletePictureById" parameterType="int">
+        delete from tb_memory where id=#{id}
+    </select>
+
+</mapper>
