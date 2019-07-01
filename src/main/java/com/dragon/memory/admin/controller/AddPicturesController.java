@@ -40,7 +40,7 @@ public class AddPicturesController {
             FastDfsUtils fastDfsUtils = new FastDfsUtils("classpath:conf.properties");
             String filename = file.getOriginalFilename();
             long fileSize = file.getSize();
-            System.out.println("文件大小："+fileSize);
+            System.out.println("文件大小: "+fileSize);
             if(fileSize > 10485760){
                 logger.info("上传的文件大小超出最大值!");
                 return "/fileerror";
