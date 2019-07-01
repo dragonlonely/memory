@@ -48,7 +48,6 @@ public class AddPicturesController {
             String ext_name = filename.substring(filename.lastIndexOf(".") + 1);
             String path = fastDfsUtils.fileUpload(file.getBytes(), ext_name);
             picture = IMAGE_SERVER_URL + path;
-            System.out.println(picture);
 
             Memory memory = new Memory();
             memory.setPname(picturesVo.getPname());
