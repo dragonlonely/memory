@@ -28,4 +28,10 @@ public interface MemoryMapper {
     Memory getPicturesDetailById(Integer id);
 
     void deletePictureById(Integer id);
+
+    List<Memory> showAllPictures();
+
+    void updatePictures(Memory memory);
+
+    List<Memory> queryPictures(@Param("pname") String pname,@Param("createtime") String createtime);
 }

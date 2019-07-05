@@ -55,4 +55,17 @@ public class MemoryServiceImpl implements MemoryService {
     public void deletePictureById(Integer id) {
         memoryMapper.deletePictureById(id);
     }
+
+    public List<Memory> showAllPictures() {
+        return memoryMapper.showAllPictures();
+    }
+
+    public void updatePictures(Memory memory) {
+        memoryMapper.updatePictures(memory);
+    }
+
+    public List<Memory> queryPictures(String pname, String createtime) {
+        List<Memory> memoryList = memoryMapper.queryPictures(pname, createtime);
+        return memoryList;
+    }
 }

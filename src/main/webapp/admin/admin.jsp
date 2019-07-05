@@ -132,7 +132,7 @@
 					$(".dv_content").attr("src","${pageContext.request.contextPath}/admin/addpicturesType.jsp");
 				})
 				$("#showPictures").click(function(){
-					$(".dv_content").attr("src","${pageContext.request.contextPath}/goods/getpictureslist.action");
+					$(".dv_content").attr("src","${pageContext.request.contextPath}/picture/showallpictures.action");
 				})
 				$("#addPictures").click(function(){
 					$(".dv_content").attr("src","${pageContext.request.contextPath}/admin/addPictures.jsp");

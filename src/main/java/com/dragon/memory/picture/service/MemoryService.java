@@ -17,4 +17,9 @@ public interface MemoryService {
 
     void deletePictureById(Integer id);
 
+    List<Memory> showAllPictures();
+
+    void updatePictures(Memory memory);
+
+    List<Memory> queryPictures(String pname,String createtime);
 }

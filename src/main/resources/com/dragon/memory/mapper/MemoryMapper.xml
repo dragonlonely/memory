@@ -27,4 +27,26 @@
         delete from tb_memory where id=#{id}
     </select>
 
+    <select id="showAllPictures" resultType="com.dragon.memory.picture.pojo.Memory">
+        select * from tb_memory order by id
+    </select>
+
+    <update id="updatePictures">
+        update tb_memory set pname=#{pname},picture=#{picture},createtime=#{createtime},star=#{star},remark=#{remark} where id=#{id}
+    </update>
+
+    <select id="queryPictures" resultType="com.dragon.memory.picture.pojo.Memory">
+        select id,pname,createtime,picture,star,remark from tb_memory
+        <where>
+            <if test="pname != null and pname != ''">
+                and pname LIKE CONCAT(CONCAT('%',#{pname},'%'))
+            </if>
+
+            <if test="createtime != null and createtime != ''">
+                and createtime LIKE CONCAT(CONCAT('%',#{createtime},'%'))
+            </if>
+        </where>
+        ORDER BY id
+    </select>
+
 </mapper>

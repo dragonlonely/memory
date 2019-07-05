@@ -50,10 +50,9 @@
 			  
 		</div>
 			
-			<c:if test="${pageBean.totalCount>0 }">
+		<c:if test="${pageBean.totalCount>0 }">
 			<nav aria-label="..." class="text-center">
 			  <ul class="pagination">
-			  	
 			  	<c:if test="${pageBean.pageNum<=1 }">
 			  	 	<li class="disabled"><span aria-hidden="true">«</span></li>
 			  	</c:if>
@@ -71,14 +70,13 @@
 			    </c:forEach>
 			    
 			    <c:if test="${pageBean.pageNum==pageBean.totalPage }">
-			     <li class="disabled"><span aria-hidden="true">»</span></li>
+			     	<li class="disabled"><span aria-hidden="true">»</span></li>
 			    </c:if>
-			      <c:if test="${pageBean.pageNum<pageBean.totalPage }">
-			     <li><a href="${pageContext.request.contextPath }/memory/getallpictures.action?pageNum=${pageBean.pageNum+1}&pageSize=${pageBean.pageSize}" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+				  <c:if test="${pageBean.pageNum<pageBean.totalPage }">
+			     	<li><a href="${pageContext.request.contextPath }/memory/getallpictures.action?pageNum=${pageBean.pageNum+1}&pageSize=${pageBean.pageSize}" aria-label="Next"><span aria-hidden="true">»</span></a></li>
 			    </c:if>
-
-		  </ul>
-		</nav>
+		  		</ul>
+			</nav>
 		</c:if>
    	</div>
 </div>

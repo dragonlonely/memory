@@ -66,7 +66,7 @@ public class AddressController {
         System.err.println(name+"---"+phone+"---"+detail);
 
         addressService.addAddress(new Address(0,detail,name,phone,user.getId(),0));
-        logger.info("添加收货地址");
+        logger.info("添加地址");
         return "forward:getaddress.action";
     }
 
@@ -81,7 +81,7 @@ public class AddressController {
         User user = (User) object;
         address.setUid(user.getId());
         addressService.updateAddress(address);
-        logger.info("修改收货地址为："+address.toString());
+        logger.info("修改地址为："+address.toString());
         return "forward:getaddress.action";
     }
 
@@ -90,7 +90,7 @@ public class AddressController {
     public String deleteAddress(HttpServletRequest request){
         String id = request.getParameter("id");
         addressService.deleteAddress(id);
-        logger.info("删除收货地址,删除的id为："+id);
+        logger.info("删除地址,删除的id为："+id);
         return "forward:getaddress.action";
     }
 
