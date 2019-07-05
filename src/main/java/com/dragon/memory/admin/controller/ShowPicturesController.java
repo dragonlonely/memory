@@ -65,7 +65,6 @@ public class ShowPicturesController {
     public String updatePictures(HttpServletRequest request, MultipartFile file){
         String id = request.getParameter("id");
         String pname = request.getParameter("pname");
-        String createtime = request.getParameter("createtime");
         String star = request.getParameter("star");
         String remark = request.getParameter("remark");
 
