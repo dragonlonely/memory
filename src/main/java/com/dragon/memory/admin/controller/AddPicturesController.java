@@ -1,6 +1,7 @@
 package com.dragon.memory.admin.controller;
 
 
+import com.dragon.memory.commons.annotation.LogAnnotation;
 import com.dragon.memory.picture.pojo.Memory;
 import com.dragon.memory.picture.service.MemoryService;
 import com.dragon.memory.utils.FastDfsUtils;
@@ -33,7 +34,14 @@ public class AddPicturesController {
     @Value("${IMAGE_SERVER_URL}")
     private String IMAGE_SERVER_URL;
 
+    /**
+     * 上传照片
+     * @param picturesVo
+     * @param file
+     * @return
+     */
     @PostMapping("/addpictures")
+    @LogAnnotation(opertionName = "管理员上传照片",operationType = "addpictures")
     public String addPictures(PicturesVo picturesVo, MultipartFile file) {
         String picture = null;
         try {
@@ -61,7 +69,7 @@ public class AddPicturesController {
             e.printStackTrace();
             logger.info("添加图片失败!");
         }
-        logger.info("添加商品成功!");
+        logger.info("添加图片成功!");
         return "/admin/addPictures";
     }
 
