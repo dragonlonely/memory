@@ -56,6 +56,9 @@ public class AdminLoginController {
             logger.info("管理员登录失败");
             return "redirect:/admin/admin.jsp";
         }
+        //获取全部有效会员
+        int usercount=userService.getUserCount();
+        request.getSession().setAttribute("usercount", usercount);
         request.getSession().setAttribute("admin", admin);
         logger.info("管理员登录成功!==>"+username);
         return "redirect:/admin/admin.jsp";

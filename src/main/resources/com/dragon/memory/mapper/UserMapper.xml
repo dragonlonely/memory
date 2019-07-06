@@ -76,4 +76,8 @@
 
     </select>
 
+    <select id="getUserCount" resultType="int">
+        select count(*) from tb_user where flag=1
+    </select>
+
 </mapper>

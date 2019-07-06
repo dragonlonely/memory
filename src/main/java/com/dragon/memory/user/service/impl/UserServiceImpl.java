@@ -100,4 +100,8 @@ public class UserServiceImpl implements UserService {
     public int getRoleByUsername(String username) {
         return userMapper.getRoleByUsername(username);
     }
+
+    public int getUserCount() {
+        return userMapper.getUserCount();
+    }
 }

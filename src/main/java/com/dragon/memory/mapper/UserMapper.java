@@ -36,4 +36,6 @@ public interface UserMapper {
     String getPasswordSaltByUsername(String username);
 
     int getRoleByUsername(String username);
+
+    int getUserCount();
 }

@@ -53,7 +53,7 @@
 		<ul id="top_right" class="collapse navbar-collapse nav navbar-nav navbar-right"	style="margin-right: 20px;">
 			<li>
 				<a href="#">
-					<span class="badge"	style="background-color: red;">23</span>
+					<span class="badge"	style="background-color: red;">${usercount}</span>
 				</a>
 			</li>
 			<li>

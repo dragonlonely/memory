@@ -43,4 +43,6 @@ public interface UserService {
     String getPasswordSaltByUsername(String username);
 
     int getRoleByUsername(String username);
+
+    int getUserCount();
 }
