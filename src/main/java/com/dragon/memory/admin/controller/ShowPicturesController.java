@@ -52,7 +52,6 @@ public class ShowPicturesController {
                 showPicturesVos.add(showPicturesVo);
             }
             request.getSession().setAttribute("pictureList", showPicturesVos);
-            //model.addAttribute("pictureList", showPicturesVos);
             logger.trace("获取所有图片"+showPicturesVos.toString());
             return "redirect:/admin/picturesDetails.jsp";
         } catch (Exception e) {
